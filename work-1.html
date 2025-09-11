@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Marie Seitz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/0fef87968d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header-work">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="images/logo.png" class="logo"></a>
+                <i class="fa-solid fa-bars" onClick="openmenu()"></i>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="index.html#about">Über mich</a></li>
+                    <li><a href="index.html#services">Meine Leistungen</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact">Kontakt</a></li>
+                    <i class="fa-solid fa-xmark" onClick="closemenu()"></i>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <button id="jumpBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div id="work-1">
+        <h2 class="work-h2">Bachelorarbeit: Manuell gestaltete Applikation vs. KI generierte Applikation</h3>
+        <p class="introduction">Seit der Corona-Pandemie hat sich die Entwicklung von Künstlicher Intelligenz (KI) rasant beschleunigt [1], was zu einer Vielzahl neuer Einsatzmöglichkeiten geführt hat. KI gilt heute als zukunftsweisende Technologie [2] und wird zunehmend in Unternehmen eingesetzt [3], [4]. Gleichzeitig verzeichnet auch die private Nutzung von KI-Tools, wie beispielsweise ChatGPT, einen deutlichen Anstieg, insbesondere bei jüngeren Generationen [5]. Auch Anbieter von Website-Baukästen, wie IONOS oder WIX, integrieren zunehmend KI-Funktionen, die eine automatisierte Gestaltung, Bildauswahl, Textgenerierung und Suchmaschinenoptimierung (SEO) ermöglichen [6], [7]. Vor diesem Hintergrund stellte ich mir die Frage, ob sich eine KI-generierte Applikation als kostengünstige und schnelle Alternative zu traditionell manuell gestalteten Applikationen eignet.
+            <br>Trotz der wachsenden Verbreitung von KI-gestützten Tools im Webdesign existieren bislang nur wenige empirische Studien, die eine KI-generierte und eine manuell gestaltete Applikation systematisch im Hinblick auf User Experience (UX) und Usability (UI) vergleichen. Vor diesem Hintergrund untersucht die vorliegende Arbeit zwei zentrale Forschungsfragen: 
+            <br>(1) Wie unterscheiden sich KI-generierte und manuell gestaltete Applikationen hinsichtlich Usability, gemessen an Effizienz, Effektivität und Zufriedenheit? 
+            <br>(2) Welche Verhaltens- und Emotionsmuster zeigen Nutzer bei der Interaktion mit beiden Applikationstypen?
+            <br>Das Ziel dieser Arbeit war es demnach, zu untersuchen, inwieweit KI-generierte Webdesign-Produkte eine überzeugende Alternative zu manuell erstellten Websites für Endnutzer darstellen.
+            <br>Um die Nutzererfahrung und Usability zweier Applikationen evaluieren und vergleichen zu können, wurde zum einen eine Applikation durch mich, einen erfahrenen Designer gestaltet, und zum anderen eine weitere mithilfe eines KI-gestützten Website-Builders durch Anweisungen eines Laien ohne Wissen im Bereich Webdesign. 
+        </p>
+
+        <div class="downloads">
+        <a href="downloads/Bachelorarbeit_SeitzMarie_PDF.pdf"target="_blank" download class="btn btn2">Download Bachelorarbeit PDF</a>
+        <a href="downloads/Bachelorarbeit_SeitzMarie.zip"target="_blank" download class="btn btn2">Download Komplette Bachelorarbeit</a>
+        </div>
+
+        <div class="manuell">
+            <h3>Manuell gestaltete Applikation</h3>
+            <div class="row-work">
+                <div class="work-col-1">
+                    <div class="slider-container">
+                        <a class="prev" onclick="plusSlides(-1, this)">&#10094;</a>
+
+                        <div class="slider">
+                            <div class="slider-wrapper">
+                                <div class="slide">
+                                  <img src="images/work-1/work-1-bachelorarbeit_1.png" alt="Manuell gestaltete Applikation High Fidelity 2" class="click-img">
+                                  <div class="caption">Manuell gestaltete Applikation High Fidelity 2</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-1/work-1-bachelorarbeit_2.png" alt="Manuell gestaltete Applikation High Fidelity 2" class="click-img">
+                                  <div class="caption">Manuell gestaltete Applikation High Fidelity 2</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-1/work-1-bachelorarbeit_3.png" alt="Manuell gestaltete Applikation High Fidelity 1" class="click-img">
+                                  <div class="caption">Manuell gestaltete Applikation High Fidelity 1</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-1/work-1-bachelorarbeit_4.png" alt="Manuell gestaltete Applikation High Fidelity 1" class="click-img">
+                                  <div class="caption">Manuell gestaltete Applikation High Fidelity 1</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-1/work-1-bachelorarbeit_5.png" alt="Manuell gestaltete Applikation Low Fidelity" class="click-img">
+                                  <div class="caption">Manuell gestaltete Applikation Low Fidelity</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-1/work-1-bachelorarbeit_6.png" alt="Manuell gestaltete Applikation Low Fidelity" class="click-img">
+                                  <div class="caption">Manuell gestaltete Applikation Low Fidelity</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-1/work-1-bachelorarbeit_7.png" alt="Human-Centered-Design Prozess - User Journey Map" class="click-img">
+                                  <div class="caption">Human-Centered-Design Prozess - User Journey Map</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-1/work-1-bachelorarbeit_8.png" alt="Human-Centered-Design Prozess - Personas" class="click-img">
+                                  <div class="caption">Human-Centered-Design Prozess - Personas</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-1/work-1-bachelorarbeit_9.png" alt="Human-Centered-Design Prozess - Future State Journey Map" class="click-img">
+                                  <div class="caption">Human-Centered-Design Prozess - Future State Journey Map</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="next" onclick="plusSlides(1, this)">&#10095;</a>
+                    </div>
+                </div>
+
+                    <div class="work-col-2">
+                        <p>Die manuelle Applikation wurde auf Grundlage eines detaillierten Projektbriefings entwickelt, das die Ausgangssituation, das Produktangebot und die Mitarbeiter definierte. Die Entwicklung erfolgte durch mich, einen erfahrenen Webdesigner unter Anwendung des Human-Centered Design Prozesses. Zu den angewandten Methoden zählten das Benchmarking und eine Competitor Analyse, die Erstellung von Personas und Customer Journey Maps sowie die Formulierung von „How Might We“-Fragen. Im weiteren Prozess wurde ein Brainstorming, Card Sorting und eine Future State Journey Map durchgeführt. Weiterhin wurden Skizzen, eine Informationsarchitektur und Wireframes erstellt. Auf Basis eines Low-Fidelity-Prototyps wurde ein erster Usability-Test mit vier Personen durchgeführt. Die Erkenntnisse der Tests wurden in einem ersten High-Fidelity-Prototyp umgesetzt, der mit fünf Testpersonen getestet wurde. Die daraus resultierenden Erkenntnisse flossen in der finalen Umsetzung eines High-Fidelity-Prototyps mit ein, der in Figma realisiert wurde.</p>
+                        <a href="https://miro.com/app/board/uXjVLSparMU=/?share_link_id=623886677562"target="_blank" download class="btn btn2">Methoden ansehen</a>  
+                        <div class="downloads">
+                            <a href="https://www.figma.com/proto/HiWVEqeHrvSVi7aNYoPrTq/LowFidelity?node-id=1-2&t=qc3HyWwAYJ5ixfcT-1"target="_blank" download class="btn btn2">Low Fidelity Prototyp</a>
+                            <a href="https://www.figma.com/proto/NS6PfjyEXrvJ4koGNXVSzl/HighFidelity_1?node-id=1-2&t=i1IOQJrA8OiUN0a1-1"target="_blank" download class="btn btn2">High Fidelity Prototyp 1</a>
+                            <a href="https://www.figma.com/proto/nIv9WirXWX8jqtZcThbchd/HighFidelity_2?node-id=1-2&t=5njEh9MQSQPgmA1Z-1"target="_blank" download class="btn btn2">High Fidelity Prototyp 2</a>
+                        </div>
+                    </div>
+            </div>            
+        </div>
+
+        <div class="KI">
+            <h3>KI-generierte Applikation</h3>
+            <div class="row-work">
+                <div class="work-col-2">
+                    <p>Parallel dazu wurde die KI-generierte Applikation von einer Testperson ohne Kenntnisse im Bereich Webdesign erstellt. Damit sich der Laie besser in dem Builder zurechtzufinden konnte, wurde mit Hilfe eines Tutorials in YouTube das nötige Wissen für die Entwicklung vermittelt. Für die Erstellung kam der WIX AI Builder zum Einsatz, bei dem die Testperson erneut auf Basis eines detaillierten Projektbriefings das die Ausgangssituation, das Produktangebot und die Mitarbeiter definierte, dem AI Builder Prompts gab. Die resultierende Applikation wurde im Anschluss von der gleichen Person autodidaktisch angepasst. Jedoch wurde darauf geachtet, dass keine Änderungen ohne die Hilfe der AI durchgeführt wurden, insbesondere im Hinblick auf die Struktur, die Informationsarchitektur, den Farben und dem Wortlaut von Inhalten. Die Erstellung der Website mit dem KI-gestützten Website-Builder von WIX verlief insgesamt positiv, insbesondere durch einen hilfreichen Erstellungsprozess und vorgegebene Angaben. Es offenbarten sich jedoch auch Schwächen in der Anpassungsfähigkeit, der Prompts bezüglich der Designanpassung und sprachliche Inkonsistenz. Zudem war trotz KI-Unterstützung eine manuelle Erstellung der Produkte nach einer Vorlage des AI Builders erforderlich, wodurch der Zeitaufwand höher ausfiel als erwartet. </p>
+                </div>
+                <div class="work-col-1">
+                    <div class="slider-container">
+                        <a class="prev" onclick="plusSlides(-1, this)">&#10094;</a>
+
+                        <div class="slider">
+                            <div class="slider-wrapper">
+                                <div class="slide">
+                                    <img src="images/work-1/work-1-bachelorarbeit_10.png" alt="KI-generierte Applikation - Startseite" class="click-img">
+                                    <div class="caption">KI-generierte Applikation - Startseite</div>
+                                </div>
+                                <div class="slide">
+                                    <img src="images/work-1/work-1-bachelorarbeit_11.png" alt="KI-generierte Applikation - Shop" class="click-img">
+                                    <div class="caption">KI-generierte Applikation - Shop</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="next" onclick="plusSlides(1, this)">&#10095;</a>
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+        <div class="discussion">
+            <h3>Ergebnisse</h3>
+            <h4>(1)	Wie unterscheiden sich KI-generierte und manuell gestaltete Applikationen hinsichtlich Usability, gemessen an Effizienz, Effektivität und Zufriedenheit? </h4>
+            <p>Die manuell erstellte Applikation wurde in nahezu allen Bereichen der Benutzererfahrung besser bewertet als die KI-generierte Applikation. Während keine statistisch signifikanten Unterschiede in den Aspekten Aktivierung, Kreativität und Sicherheit festgestellt wurden, schnitt die KI-Applikation in den Bereichen Innovation, Originalität, Design, Attraktivität, Sympathie und Gesamtbewertung schlechter ab. Nutzer empfanden die manuelle Applikation als neuartiger, wertvoller, erfreulicher, interessanter, angenehmer und spannender.
+                Bezüglich Effizienz zeigten sich keine statistisch signifikanten Unterschiede in Schnelligkeit und Erlernbarkeit. Dennoch benötigten Nutzer im Durchschnitt 9:14 Minuten für Aufgaben in der KI-Applikation und 6:59 Minuten bei der manuellen Applikation. Die manuelle Applikation wurde zudem als einfacher, effizienter, besser navigierbar und strukturierter wahrgenommen.
+                Auch in der Effektivität erzielte die manuelle Applikation bessere Bewertungen: Sie wurde als übersichtlicher, verständlicher, effizienter und voraussagbarer beurteilt. Bei der Abschlussquote blieben bei der KI-Applikation drei Aufgaben unvollständig, während bei der manuellen Applikation nur zwei Aufgaben nicht abgeschlossen wurden. Fehler bei der KI-Applikation resultierten hauptsächlich aus Interface- und Navigationsproblemen, während bei der manuellen Applikation individuelle Verständnisfehler dominierten.
+                Die Zufriedenheit war bei der manuellen Applikation signifikant höher. Sie wurde als unterstützend, erwartungskonform, pragmatisch und aufgeräumt bewertet, während die KI-Applikation in allen Zufriedenheitskategorien schlechter abschnitt.
+                Schließlich wurde das Design der manuellen Applikation überwiegend positiv bewertet, insbesondere in Bezug auf Farbwahl, Übersichtlichkeit und moderne, aber konservative Designsprache. Bei der KI-Applikation überwog negatives Feedback, vor allem hinsichtlich Farbkontrasten, Banner-Layout, Footer-Inhalten, zu kleinen Buttons und einer Vielzahl visueller Effekte.
+            </p>
+            <h4>(2)	Welche Verhaltens- und Emotionsmuster zeigen Nutzer bei der Interaktion mit beiden Applikationstypen?</h4>
+            <p>Die manuell erstellte Applikation erhielt bezüglich der Benutzererfahrung durchgehend bessere Bewertungen als die KI-generierte Applikation. In den Bereichen Aktivierung, Kreativität und Sicherheit zeigten sich keine signifikanten Unterschiede, jedoch schnitt die KI-Applikation in Bezug auf Innovation, Originalität, Design, Attraktivität, Sympathie und Gesamtbewertung schlechter ab. Nutzer empfanden die manuelle Applikation als neuartiger, wertvoller, erfreulicher, anziehender, interessanter, angenehmer und spannender.
+                Beim Nutzerverhalten zeigte die KI-Applikation mehr Unsicherheiten, Frustrationen und genervte Reaktionen. Zögern, Verzweiflung und eine notwendige Lernkurve traten häufiger auf, insgesamt überwog negatives Verhalten. Die manuelle Applikation hingegen förderte sicheres Verhalten, weniger Zögern, Unsicherheit und Verwirrung, wobei positives Verhalten dominierte.
+                In Bezug auf Emotionen erzeugte die manuelle Applikation deutlich mehr positive Gefühle wie Freude, Ruhe und Interesse, während negative Emotionen seltener und schwächer auftraten. Die KI-Applikation führte hingegen zu weniger positiven und häufigeren, intensiveren negativen Emotionen, insbesondere Verwirrung, Entsetzen, Wut und Enttäuschung.
+            </p>
+        </div>
+
+        <div class="conclusion">
+            <h4>Fazit</h4>
+            <p>Diese Arbeit untersuchte Unterschiede in Benutzererfahrung und Benutzerfreundlichkeit zwischen KI-generierten und manuell gestalteten Applikationen. Die manuelle Applikation erhielt überwiegend bessere Bewertungen, insbesondere in Design, Effizienz und Effektivität, während keine Unterschiede in den Bereichen aktivierend, kreativ oder sicher festgestellt wurden. Nutzerfeedback zeigte weiterhin, dass die manuelle Applikation angenehmer, übersichtlicher und funktionaler wahrgenommen wurde, während die KI-Anwendung zwar als zufriedenstellend angesehen wurde, aber noch nicht das Niveau einer professionell gestalteten Website erreichen kann. Zusätzlich ist der Erstellungsprozess aktuell für Laien noch zu komplex und zeitaufwendig, insbesondere bei der Erstellung der Produktseiten, der Einrichtung der Versandoptionen oder den möglichen präzisen Anweisungen an die KI. Für Startups, die schnell kostengünstige Lösungen benötigen, können solche Applikationen jedoch bereits praktikabel sein. Langfristig könnten KI-generierte Websites, nach Optimierung der bestehenden Schwächen, eine ernsthafte Alternative zu manuell gestalteten Angeboten darstellen.
+                Die Arbeit wurde durch einige Limitationen eingeschränkt, wie in der relativ kleinen Teilnehmerzahl von 21 Personen pro Applikation, dem hohen Zeitaufwand für die Erstellung der manuellen Applikation und der Auswertung der Daten der Tests sowie einzelnen Ausreißern in den Messwerten, die die statistische Signifikanz beeinflussen könnten. Zudem könnte die zufällige Anordnung der Begriffe im User Experience Questionnaire unbeabsichtigte Fehleinschätzungen der Teilnehmer begünstigt haben. Trotz dieser Limitationen liefert die Arbeit wertvolle Erkenntnisse hinsichtlich der Frage, ob KI-generierte Applikationen eine echte Alternative zu manuell gestalteten Applikationen bieten.
+            </p>
+        </div>
+
+        <div class="references">
+            <h3>Referenzen:</h3>
+            <p>[1] J. Büchel, V. Demary, H. Goecke, E. Kohlisch, O. Koppel, A. Mertens, C. Rusche, M. Scheufen, and J. Wendt, KI-Monitor 2021 – Status quo der Künstlichen Intelligenz in Deutschland, Institut der deutschen Wirtschaft, Aug. 2021. [Online]. Available: https://www.iwkoeln.de/fileadmin/user_upload/Studien/Gutachten/PDF/2021/KI_Monitor_Bericht_2021.pdf. [Accessed: Jul. 31, 2024].
+               <br>[2] Was ist künstliche Intelligenz und wie wird sie genutzt?, Europäisches Parlament, Jun. 20, 2023. [Online]. Available: https://www.europarl.europa.eu/topics/de/article/20200827STO85804/was-ist-kunstliche-intelligenz-und-wie-wird-sie-genutzt. [Accessed: Jul. 31, 2024].
+               <br>[3] A. Berg, Digitalisierung der Wirtschaft, Bitkom, Apr. 21, 2021. [Online]. Available: https://www.bitkom.org/sites/default/files/2021-04/bitkom-charts-kunstliche-intelligenz-21-04-2021_final.pdf. [Accessed: Jul. 31, 2024].
+               <br>[4] Künstliche Intelligenz – Perspektive der deutschen Wirtschaft, Statista, Jul. 9, 2024. [Online]. Available: https://de.statista.com/themen/9400/ki-in-der-deutschen-wirtschaft/#topicOverview. [Accessed: Jul. 31, 2024].
+               <br>[5] Künstliche Intelligenz – Perspektive der deutschen Gesellschaft, Statista, Jul. 16, 2024. [Online]. Available: https://de.statista.com/themen/9434/ki-in-der-deutschen-gesellschaft/#topicOverview. [Accessed: Jul. 31, 2024].
+               <br>[6] KI Website erstellen | Kostenlose KI Website in wenigen Minuten, Wix. [Online]. Available: https://de.wix.com/ai-website-builder. [Accessed: Jan. 30, 2025].
+               <br>[7] Homepage-Baukasten » Eigene Website mit IONOS, IONOS. [Online]. Available: https://www.ionos.de/websites/homepage-baukasten. [Accessed: Oct. 2, 2024].</p>
+        </div>
+           </div>
+
+    <!-- Slider -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const sliders = document.querySelectorAll(".slider-container");
+
+          sliders.forEach((container) => {
+            const slider = container.querySelector(".slider");
+            const wrapper = container.querySelector(".slider-wrapper");
+            const slides = container.querySelectorAll(".slide");
+            const prevBtn = container.querySelector(".prev");
+            const nextBtn = container.querySelector(".next");
+
+            let currentSlide = 0;
+
+            function showSlide(index) {
+              if (index < 0) {
+                currentSlide = slides.length - 1;
+              } else if (index >= slides.length) {
+                currentSlide = 0;
+              } else {
+                currentSlide = index;
+              }
+              // verschiebe wrapper
+              wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+
+            prevBtn.addEventListener("click", () => showSlide(currentSlide - 1));
+            nextBtn.addEventListener("click", () => showSlide(currentSlide + 1));
+
+            // Initial aufrufen
+            showSlide(currentSlide);
+          });
+        });
+    </script>
+
+    <!-- Menü -->
+   <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+   </script>
+
+   <!-- Jump Up Button -->
+   <script>
+      const btn = document.getElementById("jumpBtn");
+      let scrollTimer;
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 200) {
+          btn.classList.add("show");   
+        } else {
+          btn.classList.remove("show"); 
+        }
+
+        // Inaktivitäts-Timer zurücksetzen
+        clearTimeout(scrollTimer);
+
+        if (window.scrollY > 200) {
+          scrollTimer = setTimeout(() => {
+            btn.classList.remove("show"); 
+          }, 2000);
+        }
+      });
+    </script>
+
+    <!-- Bilder bei Klick vergrößern -->
+    <script>
+      const popup = document.createElement("div");
+      popup.classList.add("img-popup");
+      popup.innerHTML = "<img src=''>";
+      document.body.appendChild(popup);
+
+      const popupImg = popup.querySelector("img");
+
+      document.querySelectorAll(".click-img").forEach(img => {
+        img.addEventListener("click", () => {
+          popupImg.src = img.src;        
+          popup.style.display = "flex";  
+        });
+      });
+
+      popup.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+    </script>
+</body>
+</html>
