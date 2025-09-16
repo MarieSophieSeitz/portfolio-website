@@ -19,6 +19,11 @@ body{
 	overflow-x: hidden;
 }
 
+footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
 a, button, span, p {
   color: inherit;     
   text-decoration: none; 
@@ -27,13 +32,49 @@ a, button, span, p {
 
 #header{
 	width: 100%;
-	height: 100vh;
-	background-color: #EADBC8;
-	padding: 8px;
+  background-color: #EADBC8;
+  padding: 50px 15px 50px; 
+  min-height: 100vh;       
+  box-sizing: border-box;
 }
 
-.container{
-	padding: 10px 10px;
+.impression {
+  background-color: #EADBC8; 
+  width: 100%;
+  margin: 0; 
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1350px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.user-image img {
+  max-width: 350px;
+  border-radius: 20px;
+  border-radius: 30px; 
+  margin-top: 40%;
+}
+
+.header-text{
+	flex: 1;
+	margin-top: 20%;
+	font-size: 26px;
+	max-width: 800px;
+}
+
+.header-text h1{
+	font-size: 32px;
+	margin-top: 20px;
+	line-height: 1.5;
+}
+
+.header-text h1 span{
+	color:#87976B;
 }
 
 nav {
@@ -79,37 +120,6 @@ nav ul li a::after{
 
 nav ul li a:hover::after{
 	width: 100%;
-}
-
-.impression {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px;
-}
-
-.header-text{
-	margin-top: 20%;
-	font-size: 30px;
-	max-width: 800px;
-}
-
-.header-text h1{
-	font-size: 35px;
-	margin-top: 20px;
-	line-height: 1.5;
-}
-
-.header-text h1 span{
-	color:#87976B;
-}
-
-.user-image img {
-  max-width: 400px;  
-  width: 100%;        
-  height: auto;
-  border-radius: 30px; 
-  margin-top: 20%;
 }
 
 p {
@@ -168,7 +178,7 @@ p {
 /* Über mich */
 
 #about{
-	padding: 140px 8px 100px 8px;
+	padding: 160px 20px 100px 20px;
 	margin-top: -100px;
 	color: #3B3B3B;
 }
@@ -250,7 +260,7 @@ p {
 /* Meine Leistungen */
 
 #leistungen{
-	padding: 100px 8px;
+	padding: 100px 20px;
 	margin-top: -100px;
 }
 
@@ -306,7 +316,7 @@ p {
 /* Meine Arbeiten */
 
 #arbeiten{
-	padding: 140px 8px 100px 8px;
+	padding: 140px 20px 100px 20px;
 	margin-top: -100px;
 	color: #3B3B3B;
 }
@@ -450,7 +460,7 @@ p {
 /* Kontakt */
 
 #kontakt{
-	padding: 100px 8px 50px 8px;
+	padding: 100px 20px 50px 20px;
 	margin-top: -100px;
 }
 
@@ -536,7 +546,7 @@ form .btn2{
 	background:#EADBC8;
 	font-weight: 300;
 	margin-top: 20px;
-	index: 100;
+	margin-bottom: 0;
 }
 
 /* Work */
@@ -550,7 +560,7 @@ form .btn2{
 }
 
 #work-1{
-	padding: 20px;
+	padding: 20px 20px 0 20px;
 }
 
 .work-h2{
@@ -685,22 +695,24 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 600px) {
-  .impression {
-    flex-direction: column;
-    padding: 20px;
-  }
 
-  .user-image {
-    margin-top: 10px;
-	text-align: center;
-  }
+	.intro-content {
+	flex-direction: column;
+	}
 
-  .user-image img {
-    max-width: 80%; 
-  }
+	.user-image img {
+	max-width: 200px;
+	margin-top: 20px;
+	}
+
+  
 }
 
 @media only screen and (max-width: 900px){
+
+	.user-image img {
+	max-width: 250px;
+	}
 
 	.header-text{
 		margin-top: 33%;
@@ -827,7 +839,8 @@ nav .fa-solid{
 	}
 
 	.manuell,
-	.KI{
+	.KI,
+	.discussion{
 	margin: 40px 0px 0 0px;
 	}	
 
