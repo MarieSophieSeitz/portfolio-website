@@ -544,7 +544,6 @@ form .btn2{
 	text-align: center;
 	padding: 25px 0;
 	background:#EADBC8;
-	font-weight: 300;
 	margin-top: 20px;
 	margin-bottom: 0;
 }
@@ -686,6 +685,63 @@ form .btn2{
 .next:hover {
   color: #606E47; 
 }
+
+/* Datenschutz & Impressum */
+
+.copyright{
+	color: #3B3B3B;
+}
+
+.copyright a {
+	text-decoration: underline;
+}
+
+.copyright a:hover {
+  color: #606E47;
+  text-decoration: none;
+ }
+
+.legal-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 20px 50px 20px;;
+  line-height: 1.6;
+  color: #3B3B3B;
+}
+
+.legal-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.legal-container h2 {
+  font-size: 1.5rem;
+  margin: 25px 0 10px;
+}
+
+.legal-container h3 {
+  font-size: 1.2rem;
+  margin: 20px 0 8px;
+}
+
+.legal-container p {
+  margin-bottom: 15px;
+}
+
+.legal-container ul {
+  margin: 10px 0 20px 20px;
+}
+
+.legal-container a {
+  color: #3B3B3B;
+  text-decoration: underline;
+}
+
+.legal-container a:hover {
+  color: #606E47;
+  text-decoration: none;
+}
+
 
 
 /* Responsive */

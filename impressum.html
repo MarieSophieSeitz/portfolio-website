@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Marie Seitz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/0fef87968d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header-work">
+        <nav>
+            <a href="#"><img src="images/logo.png" class="logo"></a>
+            <i class="fa-solid fa-bars" onClick="openmenu()"></i>
+            <ul id="sidemenu">
+                <li><a href="index.html">Start</a></li>
+                <li><a href="index.html#about">Über mich</a></li>
+                <li><a href="index.html#leistungen">Meine Leistungen</a></li>
+                <li><a href="index.html#arbeiten">Meine Arbeiten</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+                <i class="fa-solid fa-xmark" onClick="closemenu()"></i>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="legal-container">
+        <h1>Impressum</h1>
+
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>
+          Marie Sophie Seitz<br>
+          Kohlgartenstraße 15<br>
+          92348 Berg<br>
+        </p>
+
+        <h3>Kontakt</h3>
+        <p>
+          E-Mail: <a href="mailto:marie_seitz@t-online.de">marie_seitz@t-online.de</a>
+        </p>
+
+        <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+        <p>
+          Marie Sophie Seitz<br>
+          ohlgartenstraße 15<br>
+          92348 Berg<br>
+        </p>
+
+        <h3>Umsatzsteuer</h3>
+        <p>
+          USt-ID: Umsatzsteuer-ID wird nicht verwendet
+        </p>
+
+        <h3>Haftung für Inhalte</h3>
+        <p>
+          Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.<br> 
+          Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.
+        </p>
+
+        <h3>Haftung für Links</h3>
+        <p>
+          Verweise und Links auf Webseiten Dritter liegen außerhalb meines Verantwortungsbereichs.<br> 
+          Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+        </p>
+
+        <h3>Design & Umsetzung</h3>
+        <p>
+          Gestaltung &amp; Umsetzung: Marie Sophie Seitz
+        </p>
+
+        <hr style="margin:30px 0; border-color:#ddd;">
+
+        <p>
+          Zurück zur <a href="index.html">Startseite</a>.
+        </p>
+    </div>
+    
+
+    <footer>
+        <div class="copyright">
+            <p>Copyright © Marie Sophie Seitz | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+        </div>
+    </footer>
+
+     <!-- Link -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname, event) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <!-- Menü -->
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <!-- Kontaktformular -->
+    <script>
+      const msg = document.getElementById("msg")
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Nachricht wurde erfolgreich versendet"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+    <!-- Jump Up Button -->
+    <script>
+      const btn = document.getElementById("jumpBtn");
+      let scrollTimer;
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 200) {
+          btn.classList.add("show");   
+        } else {
+          btn.classList.remove("show"); 
+        }
+
+        // Inaktivitäts-Timer zurücksetzen
+        clearTimeout(scrollTimer);
+
+        if (window.scrollY > 200) {
+          scrollTimer = setTimeout(() => {
+            btn.classList.remove("show"); 
+          }, 2000);
+        }
+      });
+    </script>
+
+    <!-- Bilder bei Klick vergrößern -->
+    <script>
+      const popup = document.createElement("div");
+      popup.classList.add("img-popup");
+      popup.innerHTML = "<img src=''>";
+      document.body.appendChild(popup);
+
+      const popupImg = popup.querySelector("img");
+
+      document.querySelectorAll(".click-img").forEach(img => {
+        img.addEventListener("click", () => {
+          popupImg.src = img.src;        
+          popup.style.display = "flex";  
+        });
+      });
+
+      popup.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+    </script>
+
+</body>
+</html>

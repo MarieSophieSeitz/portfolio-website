@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Marie Seitz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/0fef87968d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header-work">
+        <nav>
+            <a href="#"><img src="images/logo.png" class="logo"></a>
+            <i class="fa-solid fa-bars" onClick="openmenu()"></i>
+            <ul id="sidemenu">
+                <li><a href="index.html">Start</a></li>
+                <li><a href="index.html#about">Über mich</a></li>
+                <li><a href="index.html#leistungen">Meine Leistungen</a></li>
+                <li><a href="index.html#arbeiten">Meine Arbeiten</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+                <i class="fa-solid fa-xmark" onClick="closemenu()"></i>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="legal-container">
+        <h1>Datenschutzerklärung</h1>
+
+        <p>Stand: 17.09.2025</p>
+
+        <h2>1. Verantwortliche Stelle</h2>
+        <p>
+          Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
+          Marie Sophie Seitz<br>
+          Kohlgartenstraße 15<br>
+          92348 Berg<br>
+          E-Mail: <a href="mailto:marie_seitz@t-online.de">marie_seitz@t-online.de</a>
+        </p>
+
+        <h2>2. Erfassung allgemeiner Informationen beim Besuch der Website</h2>
+        <p>
+          Beim Aufrufen dieser Website werden durch den auf Ihrem Endgerät zum Einsatz kommenden Browser automatisch Informationen an den Server der Website gesendet. 
+          Diese Informationen werden temporär in einem sogenannten Logfile gespeichert. Folgende Informationen können dabei protokolliert werden:
+        </p>
+        <ul class="custom-list">
+          <li>IP-Adresse (in anonymisierter Form, sofern möglich)</li>
+          <li>Datum und Uhrzeit des Zugriffs</li>
+          <li>Name und URL der abgerufenen Datei</li>
+          <li>Website, von der aus der Zugriff erfolgt (Referrer)</li>
+          <li>verwendeter Browser und ggf. das Betriebssystem</li>
+        </ul>
+        <p>Die Daten werden ausschließlich zur Gewährleistung eines störungsfreien Betriebs und zur Verbesserung des Angebots ausgewertet. Eine Weitergabe an Dritte erfolgt nur, wenn dies gesetzlich vorgeschrieben ist.</p>
+
+         <h2>3. Kontaktformular / Formspree</h2>
+        <p>
+          Wenn Sie das Kontaktformular nutzen, wird Ihre Anfrage über den Dienst <strong>Formspree</strong> verarbeitet. 
+          Formspree überträgt und speichert die eingegebenen Daten (Name, E-Mail, Nachricht) auf Servern in den USA, um mir Ihre Nachricht weiterzuleiten. 
+          Weitere Informationen finden Sie in der <a href="https://formspree.io/legal/privacy-policy/" target="_blank">Datenschutzerklärung von Formspree</a>.
+          <br><br>
+          Durch die Nutzung des Formulars erklären Sie sich mit dieser Übermittlung einverstanden.
+        </p>
+
+        <h2>4. Cookies</h2>
+        <p>
+          Diese Website verwendet keine Tracking-Cookies. Es können technisch notwendige Cookies verwendet werden, die für die Funktion der Website erforderlich sind. 
+          Falls externe Dienste (z. B. Google Fonts, YouTube o.ä.) eingebunden werden, weise ich an der betreffenden Stelle darauf hin.
+        </p>
+
+        <h2>5. Nutzung von Drittanbietern</h2>
+        <p>
+          Sofern Dienste Dritter (z. B. Google Fonts, Font Awesome, YouTube, oder Social-Media-Plugins) eingebunden sind, kann dies zur Übermittlung von Daten an diese Dienste führen. 
+          Bitte beachten Sie die Datenschutzerklärungen der jeweiligen Diensteanbieter.
+        </p>
+
+        <h2>6. Ihre Rechte</h2>
+        <p>
+          Sie haben das Recht auf Auskunft über die gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung, Löschung oder Einschränkung der Verarbeitung. 
+          Sie können der Verarbeitung unter bestimmten Voraussetzungen widersprechen bzw. eine bereits erteilte Einwilligung widerrufen.
+        </p>
+
+        <h2>7. Hosting</h2>
+        <p>
+          Die Seiten werden gehostet bei: GitHub Pages
+          Informationen zum Umgang des Hosters mit Daten entnehmen Sie bitte dessen Datenschutzerklärung.
+        </p>
+
+        <h2>8. Änderungen dieser Datenschutzerklärung</h2>
+        <p>
+          Ich behalte mir vor, diese Datenschutzerklärung bei Bedarf anzupassen. Die jeweils aktuelle Fassung finden Sie auf dieser Website.
+        </p>
+
+        <hr style="margin:30px 0; border-color:#ddd;">
+
+        <p>
+          Zurück zur <a href="index.html">Startseite</a>.
+        </p>
+  </div>
+
+    <footer>
+        <div class="copyright">
+            <p>Copyright © Marie Sophie Seitz | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+                    </p>
+        </div>
+    </footer>
+
+     <!-- Link -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname, event) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <!-- Menü -->
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <!-- Kontaktformular -->
+    <script>
+      const msg = document.getElementById("msg")
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Nachricht wurde erfolgreich versendet"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+    <!-- Jump Up Button -->
+    <script>
+      const btn = document.getElementById("jumpBtn");
+      let scrollTimer;
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 200) {
+          btn.classList.add("show");   
+        } else {
+          btn.classList.remove("show"); 
+        }
+
+        // Inaktivitäts-Timer zurücksetzen
+        clearTimeout(scrollTimer);
+
+        if (window.scrollY > 200) {
+          scrollTimer = setTimeout(() => {
+            btn.classList.remove("show"); 
+          }, 2000);
+        }
+      });
+    </script>
+
+    <!-- Bilder bei Klick vergrößern -->
+    <script>
+      const popup = document.createElement("div");
+      popup.classList.add("img-popup");
+      popup.innerHTML = "<img src=''>";
+      document.body.appendChild(popup);
+
+      const popupImg = popup.querySelector("img");
+
+      document.querySelectorAll(".click-img").forEach(img => {
+        img.addEventListener("click", () => {
+          popupImg.src = img.src;        
+          popup.style.display = "flex";  
+        });
+      });
+
+      popup.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+    </script>
+
+</body>
+</html>
