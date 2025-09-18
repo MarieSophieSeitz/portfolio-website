@@ -10,6 +10,15 @@
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/0fef87968d.js" crossorigin="anonymous"></script>
 </head>
+
+<div id="cookie-banner">
+  <p>
+    Diese Website verwendet nur technisch notwendige Cookies, um die Funktionalität sicherzustellen. 
+  </p>
+  <button><a href="impressum.html">Mehr erfahren</a></button>
+  <button id="cookie-accept">Akzeptieren</button>
+</div>
+
 <body>
     <div id="header">
         <nav>
@@ -224,12 +233,15 @@
         </div>
      </div>
 
-     <footer>
-        <div class="copyright">
-            <p>Copyright © Marie Sophie Seitz | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
-                    </p>
-        </div>
-     </footer>
+    <footer>
+      <div class="copyright">
+        <span class="copy-text">Copyright © Marie Sophie Seitz</span>
+        <span class="footer-links">
+          <a href="impressum.html">Impressum</a> | 
+          <a href="datenschutz.html">Datenschutz</a>
+        </span>
+      </div>
+    </footer>
 
      <!-- Link -->
     <script>
@@ -257,6 +269,23 @@
         function closemenu(){
             sidemenu.style.right = "-200px";
         }
+    </script>
+
+    <!-- Cookie-Banner -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const banner = document.getElementById("cookie-banner");
+          const button = document.getElementById("cookie-accept");
+
+          if (!localStorage.getItem("cookieAccepted")) {
+            banner.style.display = "block";
+          }
+
+          button.addEventListener("click", function () {
+            localStorage.setItem("cookieAccepted", "true");
+            banner.style.display = "none";
+          });
+        });
     </script>
 
     <!-- Kontaktformular -->
