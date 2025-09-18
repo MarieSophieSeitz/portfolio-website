@@ -914,9 +914,12 @@ nav .fa-solid{
 		margin-bottom: 10px;
 	}
 
+	#about{
+		padding: 160px 10px 50px 10px;
+	}
+
 	#leistungen{
-		padding: 100px 8px 50px 8px;
-		
+		padding: 100px 10px 50px 10px;
 	}
 
 	.services-list div h2{
@@ -927,8 +930,12 @@ nav .fa-solid{
 		font-size: 14px;
 	}
 
+	#kontakt{
+		padding: 100px 10px 50px 10px;
+	}
+
 	#arbeiten{
-		padding: 100px 8px 50px 8px;
+		padding: 100px 10px 50px 10px;
 		
 	}
 
