@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Marie Seitz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/0fef87968d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#"><img src="images/logo.png" class="logo"></a>
+                <i class="fa-solid fa-bars" onClick="openmenu()"></i>
+                <ul id="sidemenu">
+                    <li><a href="#">Start</a></li>
+                    <li><a href="#about">Über mich</a></li>
+                    <li><a href="#services">Meine Leistungen</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <i class="fa-solid fa-xmark" onClick="closemenu()"></i>
+                </ul>
+            </nav>
+                <div class="header-text">
+                    <p>UI/UX Designer</p>
+                    <h1>Hi, mein Name ist <span class="break">Marie Sophie Seitz.</span><br>Ich bin Grafikdesignerin, UX/UI-Designerin <br>& Frontend-Webentwicklerin</h1>
+                </div>
+        </div>
+    </div>
+
+    <button id="jumpBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+    
+<!-- Über mich -->
+
+    <div id="about">
+        <div class="container">
+        <h1 class="sub-titel">Über mich</h1>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" class="click-img">
+                </div>
+                <div class="about-col-2">
+                    <p>Während meines Studiums "Visualisierung und Interaktion in digitalen Medien" an der Hochschule Ansbach mit dem Schwerpunkt im Bereich Webdesign konnte ich bereits vielfältige Erfahrungen sammeln. Von der Erstellung von Prototypen bis zur technischen Umsetzung mit HTML, CSS und JavaScript. In meinen bisherigen Projekten lag der Fokus stets auf Benutzerfreundlichkeit, Performance und einem klaren Design. Ich schätze ein kreatives Arbeitsumfeld, in dem neue Ideen willkommen sind, und arbeite gerne im Team.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills', event)">Stärken</p>
+                        <p class="tab-links" onclick="opentab('experience', event)">Erfahrung</p>
+                        <p class="tab-links" onclick="opentab('education', event)">Ausbildung</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Technische Kenntnisse</span><br>Microsoft Office: Word, Power Point, Skype,Outlook<br>Adobe Applikationen<br>Cinema 4D<br>Unity und Visual Studio<br>H5P</li>
+                            <li><span>Web- & Designkenntniss</span><br>HTML5, CSS3, JavaScript<br>WordPress<br>Figma<br>Adobe XD<br>Responsive Design<br>UI/UX</li>
+                            <li><span>Sprachkenntnisse</span><br>Deutsch (Muttersprache)<br>Englisch (B2+ / C1)<br>Latein (Latinum)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>10/2023 - 02/2024 - Verbesserung der Dokumentation in Schockräumen in Zusammenarbeit mit dem Krankenhaus Fürth</span><br>- Durchführung des Human-centered Design Prozesses in Zusammenarbeit mit den Mitarbeitern des Schockraums des Krankenhaus Fürth<br>- Erstellung eines Logos für das neue Dokumentationssystems<br>- Erstellung eines High Fidelity Prototype für ein neues Dokumentationssystem<br>- Durchführung eines Prototype Testings in Zusammenarbeit mít den Mitarbeitern des Schockraums des Krankenhaus Fürth</li>
+                            <li><span>09/2022 - 02/2023 - Praktikum bei der Firma webOrbis im Bereich Webdesign</span><br>- Webseiten-, Layout- und Inhaltserstellung in WordPress<br>- HTML-/CSS-Umsetzung und Responsive Design<br>- Onpage-SEO-Optimierung<br>- Durchführung von SEO-/SEA-Analysen<br>- Gestaltung von Vektorgrafiken (Logos, Icons)<br>- Planen, Entwerfen und Gestalten von Printprodukten wie z.B. Schildern<br>- Bildrecherche- und Bearbeitung inklusive Retuschearbeiten und Freistellungen<br>- Arbeit mit Layern und Animationen im Slider-Editor<br>- Qualitätssicherung der Webseiten durch Prüfung, Optimierung und Funktionstests<br>- Verwaltungstechnische Aufgaben wie Protokollierung und Schriftverkehr</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>10/2020 – 5/2025</span><br>Visualisierung und Interaktion in digitalen Medien<br>Hochschule Ansbach, 91522 Ansbach<br>Abschluss: Bachelor<br>Abschlussnote: 1,3</li>
+                            <li><span>09/2012 – 06/2020</span><br>Abitur<br>Willibald-Gluck-Gymnasium, 92318 Neumarkt<br>Abschluss: Abitur<br>Abschlussnote: 2,5</li>
+                            <li><span>09/2008 – 07/2012</span><br>Montessori Grundschule<br>Montessori-Vereinigung Nürnberger Land e. V.,<br>91207 Lauf an der Pegnitz</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-titel">Meine Leistungen</h1>
+            <div class="services-list"> 
+                <div class="service-content">
+                    <i class="fa-solid fa-object-group"></i>
+                    <h2>Grafikdesignerin</h2>
+                    <p>Erfahrung in der Gestaltung von Logos, Icons und Printmedien – von der Konzeption bis zur finalen Umsetzung, mit sicherem Gespür für Typografie und Farbharmonie.</p>
+                    <!--<a href="#">Learn more</a>-->
+                </div>
+                <div class="service-content">
+                    <i class="fa-solid fa-people-group"></i>
+                    <h2>UI/UX Designerin</h2>
+                    <p>Entwicklung klar strukturierter, intuitiver Benutzeroberflächen mit Fokus auf Nutzerführung, Barrierefreiheit und responsives Design.</p>
+                    <!--<a href="#">Learn more</a>-->
+                </div>
+                <div class="service-content">
+                    <i class="fa-solid fa-laptop"></i>
+                    <h2>Frontend-Webentwicklerin</h2>
+                    <p>Umsetzung moderner Webprojekte mit HTML, CSS und JavaScript. Optimiert für Performance, Browserkompatibilität und sauberen, wartbaren Code.</p>
+                    <!--<a href="#">Learn more</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-titel">Meine Arbeiten</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1/work-1.png" class="click-img">
+                    <div class="layer">
+                        <h3>Manuell vs. KI erstellte Applikation</h3>
+                        <p>Ziel dieser Bachelorarbeit war es, eine  manuell und eine KI erststellte Applikation hinsichtlich ihrer Benutzererfahrung und Benutzerfreundlichkeit zu vergleichen, um zu bewerten, ob die KI eine Alternative darstellt.</p>
+                        <a href="work-1.html" class="btn">Mehr erfahren</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2/work-2.png" class="click-img">
+                    <div class="layer">
+                        <h3>Dokumentationssystem für Schockräume</h3>
+                        <p>Zielsetzung dieser Arbeit war es, eine Applikation für das Krankenhaus Fürth in Form eines verbesserten Dokumentationssystems hinsichtlich der Usability zu entwickeln.</p>
+                        <a href="work-2.html" class="btn">Mehr erfahren</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3/work-3.png" class="click-img">
+                    <div class="layer">
+                        <h3>Stressprävention in VR</h3>
+                        <p>Das Ziel dieser Arbeit war die Entwicklung einer Anwendung für eine VR-Brille, die begleitete Übungen zur Stressprävention ermöglicht und zur schnellen Erholung beiträgt.</p>
+                        <a href="work-3.html" class="btn">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+             <!-- <a href="#" class="btn">Mehr laden</a> -->
+        </div>
+    </div>
+
+     <!-- Kontakt -->
+
+     <div id="contact">
+     <h1 class="sub-titel">Kontaktiere mich</h1>
+        <div class="container">
+            <div class="row">
+                <div class="contact-right">
+                    <form
+                      action="https://formspree.io/f/mrbajbnv"
+                      method="POST"
+                    >
+                        <input type="text" name="Name" placeholder="Ihr Name" required>
+                        <input type="email" name="Email" placeholder="Ihre Email" required>
+                        <textarea name="Message" rows="6" placeholder="Ihre Nachricht" required></textarea>
+                        <button type="submit" class="btn btn2">Nachricht senden</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+                <div class="contact-left">
+                    <div class="social-icons">
+                        <p>Schreibe mir eine Email:<br><a href="mailto:marie_seitz@t-online.de"><i class="fa-solid fa-envelope"></i></a>marie_seitz@t-online.de</p>
+                        <p><a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BYRyASTfLSHucXMb1JHrnew%3D%3D"><i class="fa-brands fa-square-linkedin"></i></a>Besuche mich auch auf linkedin</p>
+                    </div>
+                    <a href="downloads/Bewerbung_SeitzMarie.pdf"target="_blank" download class="btn btn2">Download Bewerbung</a>
+                </div>
+            </div>
+        </div>
+        
+     </div>
+
+     <footer>
+        <div class="copyright">
+            <p>Copyright © Marie Sophie Seitz</p>
+        </div>
+     </footer>
+
+     <!-- Link -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname, event) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <!-- Menü -->
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <!-- Kontaktformular -->
+    <script>
+      const msg = document.getElementById("msg")
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Nachricht wurde erfolgreich versendet"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+    <!-- Jump Up Button -->
+    <script>
+      const btn = document.getElementById("jumpBtn");
+      let scrollTimer;
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 200) {
+          btn.classList.add("show");   
+        } else {
+          btn.classList.remove("show"); 
+        }
+
+        // Inaktivitäts-Timer zurücksetzen
+        clearTimeout(scrollTimer);
+
+        if (window.scrollY > 200) {
+          scrollTimer = setTimeout(() => {
+            btn.classList.remove("show"); 
+          }, 2000);
+        }
+      });
+    </script>
+
+    <!-- Bilder bei Klick vergrößern -->
+    <script>
+      const popup = document.createElement("div");
+      popup.classList.add("img-popup");
+      popup.innerHTML = "<img src=''>";
+      document.body.appendChild(popup);
+
+      const popupImg = popup.querySelector("img");
+
+      document.querySelectorAll(".click-img").forEach(img => {
+        img.addEventListener("click", () => {
+          popupImg.src = img.src;        
+          popup.style.display = "flex";  
+        });
+      });
+
+      popup.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+    </script>
+
+</body>
+</html>
