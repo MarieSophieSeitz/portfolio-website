@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Marie Seitz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/0fef87968d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header-work">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="images/logo.png" class="logo"></a>
+                <i class="fa-solid fa-bars" onClick="openmenu()"></i>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="index.html#about">Über mich</a></li>
+                    <li><a href="index.html#leistungen">Meine Leistungen</a></li>
+                    <li><a href="index.html#arbeiten">Meine Arbeiten</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+                    <i class="fa-solid fa-xmark" onClick="closemenu()"></i>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <button id="jumpBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div id="work-1">
+        <h2 class="work-h2">Virtuelle Charactere</h3>
+        <div class="manuell">
+            <h3>Erstellung eines 3D-Videos</h3>
+            <div class="row-work">
+                <div class="work-col-1">
+                    <div class="video-container">
+                        <iframe
+                          src="https://www.youtube.com/embed/wPvyfRpuR1M"
+                          title="YouTube video player"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="work-col-2">
+                    <p>Im Rahmen des Moduls Virtuelle Charaktere war die Aufgabe für die Projektarbeit, ein Lernvideo zu erstellen, das den Hintergrund und die 
+                        Funktionsweise des sogenannten Gecko Tapes anschaulich vermittelt. Dazu war es notwendig, sowohl die technischen Grundlagen als auch die 
+                        biologischen Prinzipien des Materials zu recherchieren und diese in eine leicht verständliche Form zu übersetzen. Auf Basis dieser Recherche 
+                        entstanden 3D-Modelle und Animationen, die mit Cinema 4D umgesetzt wurden. Ergänzend erfolgte die Nachbearbeitung, Vertonung und finale 
+                        Schnittführung mit Adobe Premiere. 
+                        <br>Das Projekt vereinte somit wissenschaftliche Recherche, konzeptionelles Storytelling und technische Umsetzung 
+                        in den Bereichen 3D-Modelling, Animation und Videoproduktion.
+                     </p>
+                </div>    
+        </div>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        <span class="copy-text">Copyright © Marie Sophie Seitz</span>
+        <span class="footer-links">
+          <a href="impressum.html">Impressum</a> | 
+          <a href="datenschutz.html">Datenschutz</a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Slider -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const sliders = document.querySelectorAll(".slider-container");
+
+          sliders.forEach((container) => {
+            const slider = container.querySelector(".slider");
+            const wrapper = container.querySelector(".slider-wrapper");
+            const slides = container.querySelectorAll(".slide");
+            const prevBtn = container.querySelector(".prev");
+            const nextBtn = container.querySelector(".next");
+
+            let currentSlide = 0;
+
+            function showSlide(index) {
+              if (index < 0) {
+                currentSlide = slides.length - 1;
+              } else if (index >= slides.length) {
+                currentSlide = 0;
+              } else {
+                currentSlide = index;
+              }
+              // verschiebe wrapper
+              wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+
+            prevBtn.addEventListener("click", () => showSlide(currentSlide - 1));
+            nextBtn.addEventListener("click", () => showSlide(currentSlide + 1));
+
+            // Initial aufrufen
+            showSlide(currentSlide);
+          });
+        });
+    </script>
+
+    <!-- Menü -->
+   <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+   </script>
+
+    <!-- Jump Up Button -->
+   <script>
+      const btn = document.getElementById("jumpBtn");
+      let scrollTimer;
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 200) {
+          btn.classList.add("show");   
+        } else {
+          btn.classList.remove("show"); 
+        }
+
+        // Inaktivitäts-Timer zurücksetzen
+        clearTimeout(scrollTimer);
+
+        if (window.scrollY > 200) {
+          scrollTimer = setTimeout(() => {
+            btn.classList.remove("show"); 
+          }, 2000);
+        }
+      });
+    </script>
+
+    <!-- Bilder bei Klick vergrößern -->
+    <script>
+      const popup = document.createElement("div");
+      popup.classList.add("img-popup");
+      popup.innerHTML = "<img src=''>";
+      document.body.appendChild(popup);
+
+      const popupImg = popup.querySelector("img");
+
+      document.querySelectorAll(".click-img").forEach(img => {
+        img.addEventListener("click", () => {
+          popupImg.src = img.src;        
+          popup.style.display = "flex";  
+        });
+      });
+
+      popup.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+    </script>
+    
+</body>
+</html>
