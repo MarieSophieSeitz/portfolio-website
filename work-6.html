@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Marie Seitz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/0fef87968d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header-work">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="images/logo.png" class="logo"></a>
+                <i class="fa-solid fa-bars" onClick="openmenu()"></i>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="index.html#about">Über mich</a></li>
+                    <li><a href="index.html#leistungen">Meine Leistungen</a></li>
+                    <li><a href="index.html#arbeiten">Meine Arbeiten</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+                    <i class="fa-solid fa-xmark" onClick="closemenu()"></i>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <button id="jumpBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div id="work-1">
+        <h2 class="work-h2">E-Learning: Fahrrad fahren im Winter</h3>
+        <div class="manuell">
+            <div class="row-work">
+                <div class="work-col-1">
+                    <div class="slider-container">
+                        <a class="prev" onclick="plusSlides(-1, this)">&#10094;</a>
+
+                        <div class="slider">
+                            <div class="slider-wrapper">
+                                <div class="slide">
+                                  <img src="images/work-6/work-6-1.png" alt="Willkommensfolie des E-Learnings" class="click-img">
+                                  <div class="caption">Willkommensfolie</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-6/work-6-2.png" alt="Folie zur notwendigen Ausrüstung am Fahrrad" class="click-img">
+                                  <div class="caption">Ausrüstung am Fahrrad</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-6/work-6-3.png" alt="Folie zur notwendigen Ausrüstung am Fahrrad" class="click-img">
+                                  <div class="caption">Ausrüstung am Fahrrad - Detailansicht</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-6/work-6-4.png" alt="Folie zur winterfesten Kleidung" class="click-img">
+                                  <div class="caption">Winterfeste Kleidung</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-6/work-6-5.png" alt="Quiz: Fahrradausrüstung" class="click-img">
+                                  <div class="caption">Quiz: Fahrradausrüstung</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="next" onclick="plusSlides(1, this)">&#10095;</a>
+                    </div>
+                </div>
+
+                <div class="work-col-2">
+                    <p>m Rahmen des Moduls Mediendidaktik / E-Learning entstand in Teamarbeit ein interaktives Lernmodul zum Thema „Rad im Winter“ 
+                        aus dem Projektbereich „Fahrradfreundliche Hochschule“.
+                        <br>Ziel war es, komplexe Informationen rund um das sichere und angenehme Radfahren in der kalten Jahreszeit didaktisch sinnvoll aufzubereiten und 
+                        für die Zielgruppe, sowohl Studierende als auch Mitarbeitende der Hochschule Ansbach, ansprechend zu vermitteln.
+                        Dafür wurden zunächst relevante Inhalte recherchiert, strukturiert und nach mediendidaktischen Prinzipien aufbereitet. Auf dieser Grundlage 
+                        entwickelten wir ein multimediales Konzept, das Texte, Bilder, Grafiken, interaktive Übungen sowie kurze Erklärvideos miteinander verbindet.
+                        Das fertige Modul kombiniert anschauliche Informationen mit praxisnahen Tipps, spielerischen Elementen, einem Quiz und einer benutzerfreundlichen 
+                        Oberfläche. So entstand ein E-Learning-Angebot, das nicht nur fachlich fundiert, sondern auch optisch ansprechend und intuitiv nutzbar ist und damit 
+                        die Idee einer fahrradfreundlichen Hochschule unterstützt und fördert.
+                     </p>
+                     <div class="fahrrad">
+                        <a href="https://fahrrad.hs-ansbach.de/e-learning/fahrrad-im-winter/"target="_blank" download class="btn btn2">Zum E-Learning</a>
+                     </div>
+                </div>    
+        </div>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        <span class="copy-text">Copyright © Marie Sophie Seitz</span>
+        <span class="footer-links">
+          <a href="impressum.html">Impressum</a> | 
+          <a href="datenschutz.html">Datenschutz</a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Slider -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const sliders = document.querySelectorAll(".slider-container");
+
+          sliders.forEach((container) => {
+            const slider = container.querySelector(".slider");
+            const wrapper = container.querySelector(".slider-wrapper");
+            const slides = container.querySelectorAll(".slide");
+            const prevBtn = container.querySelector(".prev");
+            const nextBtn = container.querySelector(".next");
+
+            let currentSlide = 0;
+
+            function showSlide(index) {
+              if (index < 0) {
+                currentSlide = slides.length - 1;
+              } else if (index >= slides.length) {
+                currentSlide = 0;
+              } else {
+                currentSlide = index;
+              }
+              // verschiebe wrapper
+              wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+
+            prevBtn.addEventListener("click", () => showSlide(currentSlide - 1));
+            nextBtn.addEventListener("click", () => showSlide(currentSlide + 1));
+
+            // Initial aufrufen
+            showSlide(currentSlide);
+          });
+        });
+    </script>
+
+    <!-- Menü -->
+   <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+   </script>
+
+    <!-- Jump Up Button -->
+   <script>
+      const btn = document.getElementById("jumpBtn");
+      let scrollTimer;
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 200) {
+          btn.classList.add("show");   
+        } else {
+          btn.classList.remove("show"); 
+        }
+
+        // Inaktivitäts-Timer zurücksetzen
+        clearTimeout(scrollTimer);
+
+        if (window.scrollY > 200) {
+          scrollTimer = setTimeout(() => {
+            btn.classList.remove("show"); 
+          }, 2000);
+        }
+      });
+    </script>
+
+    <!-- Bilder bei Klick vergrößern -->
+    <script>
+      const popup = document.createElement("div");
+      popup.classList.add("img-popup");
+      popup.innerHTML = "<img src=''>";
+      document.body.appendChild(popup);
+
+      const popupImg = popup.querySelector("img");
+
+      document.querySelectorAll(".click-img").forEach(img => {
+        img.addEventListener("click", () => {
+          popupImg.src = img.src;        
+          popup.style.display = "flex";  
+        });
+      });
+
+      popup.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+    </script>
+    
+</body>
+</html>

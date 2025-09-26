@@ -174,7 +174,6 @@ p {
   z-index: 1000;
 }
 
-/* Bild im Overlay */
 .img-popup img {
   max-width: 90%;
   max-height: 90%;
@@ -792,6 +791,10 @@ form .btn2{
 .prev:hover,
 .next:hover {
   color: #606E47; 
+}
+
+.fahrrad{
+	margin-bottom: 40px;
 }
 
 /* Datenschutz & Impressum */

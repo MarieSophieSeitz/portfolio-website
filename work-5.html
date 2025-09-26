@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Marie Seitz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/0fef87968d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header-work">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="images/logo.png" class="logo"></a>
+                <i class="fa-solid fa-bars" onClick="openmenu()"></i>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="index.html#about">Über mich</a></li>
+                    <li><a href="index.html#leistungen">Meine Leistungen</a></li>
+                    <li><a href="index.html#arbeiten">Meine Arbeiten</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+                    <i class="fa-solid fa-xmark" onClick="closemenu()"></i>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <button id="jumpBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div id="work-1">
+        <h2 class="work-h2">Fotografie / Bildbearbeitung</h3>
+        <div class="manuell">
+            <div class="row-work">
+                <div class="work-col-1">
+                    <div class="slider-container">
+                        <a class="prev" onclick="plusSlides(-1, this)">&#10094;</a>
+
+                        <div class="slider">
+                            <div class="slider-wrapper">
+                                <div class="slide">
+                                  <img src="images/work-5/work-5-Produktbild_1.png" alt="Produktbild 1" class="click-img">
+                                  <div class="caption">Produktbild 1</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-5/work-5-Produktbild_2.png" alt="Produktbild 2" class="click-img">
+                                  <div class="caption">Produktbild 2</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-5/work-5-Produktbild_3.png" alt="Produktbild 3" class="click-img">
+                                  <div class="caption">Produktbild 3</div>
+                                </div>
+                                <div class="slide">
+                                  <img src="images/work-5/work-5-Keyvisual.png" alt="Key Visual - Wie auf Wolken" class="click-img">
+                                  <div class="caption">Key Visual - Wie auf Wolken</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="next" onclick="plusSlides(1, this)">&#10095;</a>
+                    </div>
+                </div>
+
+                <div class="work-col-2">
+                    <p>Ziel dieser Arbeit war es, professionelle Produktaufnahmen eines Kopfhörers zu erstellen und dabei besonders auf eine hochwertige 
+                        und stimmige Beleuchtung zu achten.
+                        <br>Nach der Fotoproduktion wurden die Aufnahmen sorgfältig freigestellt und in Photoshop bearbeitet, um eine klare und ansprechende 
+                        Präsentation zu gewährleisten. Aus der Serie wurde schließlich ein Bild ausgewählt, das als Key Visual dienen sollte. 
+                        Dieses Motiv wurde mithilfe gezielter Retuschen und Bildbearbeitungstechniken weiterentwickelt und so gestaltet, dass es dem 
+                        vorgegebenen Thema „Wie auf Wolken“ entspricht. Dadurch entstand ein atmosphärisches Produktfoto, das sowohl technisch präzise als 
+                        auch visuell einprägsam ist.
+                     </p>
+                </div>    
+        </div>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        <span class="copy-text">Copyright © Marie Sophie Seitz</span>
+        <span class="footer-links">
+          <a href="impressum.html">Impressum</a> | 
+          <a href="datenschutz.html">Datenschutz</a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Slider -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const sliders = document.querySelectorAll(".slider-container");
+
+          sliders.forEach((container) => {
+            const slider = container.querySelector(".slider");
+            const wrapper = container.querySelector(".slider-wrapper");
+            const slides = container.querySelectorAll(".slide");
+            const prevBtn = container.querySelector(".prev");
+            const nextBtn = container.querySelector(".next");
+
+            let currentSlide = 0;
+
+            function showSlide(index) {
+              if (index < 0) {
+                currentSlide = slides.length - 1;
+              } else if (index >= slides.length) {
+                currentSlide = 0;
+              } else {
+                currentSlide = index;
+              }
+              // verschiebe wrapper
+              wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+
+            prevBtn.addEventListener("click", () => showSlide(currentSlide - 1));
+            nextBtn.addEventListener("click", () => showSlide(currentSlide + 1));
+
+            // Initial aufrufen
+            showSlide(currentSlide);
+          });
+        });
+    </script>
+
+    <!-- Menü -->
+   <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+   </script>
+
+    <!-- Jump Up Button -->
+   <script>
+      const btn = document.getElementById("jumpBtn");
+      let scrollTimer;
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 200) {
+          btn.classList.add("show");   
+        } else {
+          btn.classList.remove("show"); 
+        }
+
+        // Inaktivitäts-Timer zurücksetzen
+        clearTimeout(scrollTimer);
+
+        if (window.scrollY > 200) {
+          scrollTimer = setTimeout(() => {
+            btn.classList.remove("show"); 
+          }, 2000);
+        }
+      });
+    </script>
+
+    <!-- Bilder bei Klick vergrößern -->
+    <script>
+      const popup = document.createElement("div");
+      popup.classList.add("img-popup");
+      popup.innerHTML = "<img src=''>";
+      document.body.appendChild(popup);
+
+      const popupImg = popup.querySelector("img");
+
+      document.querySelectorAll(".click-img").forEach(img => {
+        img.addEventListener("click", () => {
+          popupImg.src = img.src;        
+          popup.style.display = "flex";  
+        });
+      });
+
+      popup.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+    </script>
+    
+</body>
+</html>
